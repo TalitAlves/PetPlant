@@ -1,0 +1,33 @@
+.quiz-box {
+  border: 2px solid black;
+  color: white;
+}
+
+.box-title {
+  padding: 2px;
+  text-align: center;
+}
+
+.box-info {
+  padding: 10px;
+  height: 90%;
+}
+
+.box-answer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  gap: 5px;
+}
+
+.btn-quiz {
+  text-align: left;
+  padding: 2px;
+}
+
+.boxTitle2 {
+  background-color: #ffa629;
+}
+.boxInfo2 {
+  background-color: #fcd19c;
+}
