@@ -1,4 +1,33 @@
-.quizz{
-    display: flex;
-    gap: 10px
+.container {
+  border: 2px solid black;
+  padding: 10px;
+}
+
+.quiz {
+  display: flex;
+  gap: 10px;
+  justify-content: space-around;
+  margin-bottom: 10px;
+  height: auto;
+  flex-wrap: wrap;
+}
+button {
+  display: block;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 768px) {
+  .quiz {
+    justify-content: space-evenly;
+    margin: 0 20px 5px 20px;
+  }
+
+  .question {
+    font-size: 1rem;
+  }
+
+  .lastChild {
+    margin-right: auto;
+  }
 }

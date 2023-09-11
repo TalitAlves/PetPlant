@@ -1,13 +1,20 @@
 import "./App.css";
 import Home from "./components/Home";
-import Api from "./service/Api";
+import RequirementsList from "./components/RequirementsList";
+import { Routes, Route } from "react-router-dom";
+
 
 function App() {
   return (
     <>
-      <Api />
-      <Home />
-    </>
+    <Routes>
+      <Route path="/" element={<Home/>}/>
+      <Route path="/RequirementsList" element={<RequirementsList/>}/>
+      
+    </Routes>
+
+     </>
+  
   );
 }
 

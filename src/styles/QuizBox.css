@@ -1,33 +1,56 @@
 .quiz-box {
-  border: 2px solid black;
-  color: white;
+  color: rgb(49, 45, 45);
+  width: 30%;
+  flex: 1;
+  border: 2px solid black
+
+}
+
+
+h2{
+  margin: 4px;
+}
+
+.question{
+    font-weight: 700;
+    text-align: center;
+    font-size: 1.3rem;
 }
 
 .box-title {
   padding: 2px;
   text-align: center;
+  color: black
 }
 
 .box-info {
   padding: 10px;
-  height: 90%;
+   padding-left: 10px;
+   height: 65%;
+
 }
 
-.box-answer {
+.box-checkbox-option {
   display: flex;
   flex-direction: column;
   margin-top: 20px;
   gap: 5px;
+  
 }
 
-.btn-quiz {
-  text-align: left;
-  padding: 2px;
+.quiz-img{
+    width: 100%;
+    height: 125px;
+    margin-top: 5px;
+    display: block;
+    margin: 0 auto;
+    align-content: end;
 }
 
-.boxTitle2 {
-  background-color: #ffa629;
+@media screen and (max-width:768px) {
+ 
+  h2{
+    font-size: 20px;
+  }
 }
-.boxInfo2 {
-  background-color: #fcd19c;
-}
+
