@@ -5,12 +5,15 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import { PlantsProvider } from './context/PlantsContext';
+import { ApiProvider } from './context/Api';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 <BrowserRouter>
 <PlantsProvider>
+<ApiProvider>
   <App/>
+  </ApiProvider>
   </PlantsProvider>
 </BrowserRouter>
 );

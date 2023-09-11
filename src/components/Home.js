@@ -63,8 +63,8 @@ function Home() {
           answer1={"Indoor"}
           answer2={"Outdoor"}
           answer3={"Whatever"}
-          value1={0}
-          value2={1}
+          value1={1}
+          value2={0}
           value3={null}
           img={local}
           selectedOption={selectedOption["local"]}

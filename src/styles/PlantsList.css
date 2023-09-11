@@ -1,14 +1,18 @@
-.requirements-list{
-    padding: 10px;
-}
-li{
-    margin-bottom: 5px;
-}
-
-.plants-list{
-    padding: 10px
+.plants-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 5px;
+  padding: 20px;
+  align-items: stretch;
+  margin: 10px;
 }
 
-h1{
-    text-align: center;
+.plant-items{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid orange;
+    align-items: center;
+    gap: 5px;
+    background-color: #9747ff;
+    
 }

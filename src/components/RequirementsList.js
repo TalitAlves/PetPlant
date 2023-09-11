@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { PlantsContext } from "../context/PlantsContext";
-import '../styles/PlantsList.css'
+import '../styles/RequirementList.css'
+import PlantsList from "./PlantsList";
 
 
 
@@ -11,7 +12,7 @@ function RequirementsList(props) {
 
   const [answers, setAnswers] = useState(
 {
-  poisonous: null,
+  pets: null,
       local: null,
       watering: null,
       sunlight: null,
@@ -26,25 +27,25 @@ function RequirementsList(props) {
           ? "For your pet's well-being, a non-toxic plant is best. 🐈💟🐶"
           : "As you don't have pets, more species would be suitable for you! ",
       local:
-        selectedOption.local === 0
+        selectedOption.local === 1
           ? "Indoor plant 🏠"
-          : selectedOption.local === 1
+          : selectedOption.local === 0
           ? "Outdoor Plant 🪴"
-          : "Indoor and outdoor plants 🏠🪴",
+          : "Indoor or outdoor plants 🏠🪴",
       watering:
         selectedOption.watering === "frequent"
           ? "Frequent watering"
-          : selectedOption.watering === "average" || "null"
+          : selectedOption.watering === "average" 
           ? "Average watering"
           : "Minimal watering",
       sunlight:
         selectedOption.sunlight.includes("full_shade")
-          ? "Dont need light 🌥️"
+          ? "Don't need light 🌥️"
           : selectedOption.sunlight.includes("part_shade")
-          ? "Dont need much light 🌤️"
+          ? "Don't need much light 🌤️"
           : selectedOption.sunlight.includes("full_sun")
-          ? "Needs lot of light ☀️"
-          : "Indifferent ☀️☁️",
+          ? "Lots of light ☀️"
+          : "☀️☁️",
       hardiness:
         selectedOption.hardiness === "7-13"
           ? "You are a crack and can have any type of plant 😜"
@@ -64,20 +65,17 @@ function RequirementsList(props) {
       <h1>Your perfect plants are here!</h1>
 
            <div className="requirements-list">
-        <h3>Requirements</h3>
-        <ul>
-          <li><span className="question">Pets: </span><span> {answers.poisonous}</span></li>
-          <li><span className="question">Local: </span><span>: {answers.local}</span></li>
-          <li><span className="question">Light: </span><span>: {answers.sunlight}</span></li>
-          <li><span className="question">Watering: </span><span>: {answers.watering}</span></li>
-          <li><span className="question">Hardiness: </span><span>: {answers.hardiness}</span></li>
-        </ul>
+              <h3>Requirements</h3>
+              <ul>
+                <li><span className="question">Pets: </span><span> {answers.poisonous}</span></li>
+                <li><span className="question">You need a: </span><span>: {answers.local}</span></li>
+                <li><span className="question">Your perfect plant needs: </span><span>: {answers.sunlight}</span></li>
+                <li><span className="question">Watering: </span><span>: {answers.watering}</span></li>
+                <li><span className="question">Hardiness: </span><span>: {answers.hardiness}</span></li>
+              </ul>
         
-      </div>
-
-      <div>
-        Response: {props.response}
-      </div>
+          </div>
+            <PlantsList/>
     </div>
   );
 }
